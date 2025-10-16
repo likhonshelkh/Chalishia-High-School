@@ -1,105 +1,95 @@
-# AGENTS.md
+# AGENTS.md - AI and Developer Guidelines
 
-This document provides essential guidelines for AI agents and human developers contributing to the Board of Intermediate and Secondary Education, Jashore project. Following these instructions ensures consistency, quality, and efficiency.
+This document provides essential guidelines for AI agents and human developers contributing to the **Chalishiya High School Management System** project. Following these instructions ensures consistency, quality, and efficiency.
 
 ## 1. Project Overview
 
-This repository contains the code for the official digital platform of the **Board of Intermediate and Secondary Education, Jashore**. The primary goal is to provide a modern, accessible, and reliable portal for students, educators, and administrative staff.
-
-**Key Functions:**
-*   Publishing results (HSC, SSC, JSC).
-*   Managing student and institution registration.
-*   Distributing official notices and circulars.
-*   Providing access to online services and forms.
-*   Serving as the official source of information for the board.
-
-The project must reflect the authority and reliability of an official government education board.
+This repository contains the code for a comprehensive school management system for **Chalishiya High School**. The goal is to create a modern, accessible, and reliable platform for students, teachers, parents, and administrators. The system must be lightweight and practical for a rural school environment.
 
 ## 2. UI/UX and Design Guidelines
 
-This project fully adopts a user-centric UI/UX philosophy. All contributions must adhere strictly to the established design system to maintain a cohesive and professional user experience.
+A clean, user-friendly, and professional user experience is critical. All contributions must adhere strictly to the established design system.
 
-### Color Palette (Grid)
-
-The color scheme is based on the official branding of the Jashore Board and national symbols. Use these variables consistently.
+### Color Palette
 
 | Role          | Color Name      | Hex Code    | Usage                                        |
 | :------------ | :-------------- | :---------- | :------------------------------------------- |
-| **Primary**   | Board Green     | `#006A4E`   | Headers, primary buttons, important links    |
-| **Secondary** | Notice Orange   | `#FF8C00`   | Banners, call-to-action sections, highlights |
-| **Accent**    | Official Gold   | `#DAA520`   | Icons, secondary buttons, decorative elements|
+| **Primary**   | School Blue     | `#005A9C`   | Headers, primary buttons, important links    |
+| **Secondary** | Success Green   | `#28A745`   | Success messages, confirmation buttons       |
+| **Accent**    | Notice Yellow   | `#FFC107`   | Banners, highlights, warning messages        |
 | **Text**      | Dark Charcoal   | `#333333`   | Main body text, headings                     |
-| **Text Muted**| Medium Gray     | `#6c757d`   | Subheadings, helper text, captions         |
 | **Background**| Light Gray      | `#F8F9FA`   | Page backgrounds, card backgrounds           |
 | **Border**    | Subtle Gray     | `#DEE2E6`   | Borders for cards, tables, and inputs        |
 
-### Typography (Bangla Font CDN)
+### Typography (Bengali Fonts)
 
-To ensure consistent and readable Bengali text across all devices, we use the **Hind Siliguri** font, served from a CDN.
+To ensure consistent and readable Bengali text, this project mandates the use of specific fonts served from a CDN. The primary font is **Kalpurush**. Others may be used where appropriate.
 
-1.  **Include the Font in HTML:** Add the following line to the `<head>` section of your main `index.html` file.
+**1. Kalpurush (Primary)**
+*   **Embed in HTML:**
     ```html
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.msar.me/fonts/kalpurush/font.css" rel="stylesheet">
     ```
-
-2.  **Apply the Font in CSS:** Use the following `font-family` stack in your global stylesheet.
+*   **CSS Usage:**
     ```css
     body {
-      font-family: 'Hind Siliguri', sans-serif;
+      font-family: 'Kalpurush', Arial, sans-serif !important;
     }
     ```
 
-## 3. Build and Test Commands
+**2. Mukti**
+*   **Embed in HTML:**
+    ```html
+    <link href="https://cdn.msar.me/fonts/mukti/font.css" rel="stylesheet">
+    ```
+*   **CSS Usage:**
+    ```css
+    .font-mukti {
+      font-family: 'Mukti', Arial, sans-serif !important;
+    }
+    ```
 
-This project uses `pnpm` for package management for efficiency.
+**3. SiyamRupali**
+*   **Embed in HTML:**
+    ```html
+    <link href="https://cdn.msar.me/fonts/siyam-rupali/font.css" rel="stylesheet">
+    ```
+*   **CSS Usage:**
+    ```css
+    .font-siyam {
+      font-family: 'SiyamRupali', Arial, sans-serif !important;
+    }
+    ```
 
-- **Install dependencies:**
-  ```bash
-  pnpm install
-  ```
-- **Run the development server:**
-  ```bash
-  pnpm dev
-  ```
-- **Build for production:**
-  ```bash
-  pnpm build
-  ```
-- **Run all tests:**
-  ```bash
-  pnpm test
-  ```
-- **Run linter to check for code style issues:**
-  ```bash
-  pnpm lint
-  ```
+**4. SolaimanLipi**
+*   **Embed in HTML:**
+    ```html
+    <link href="https://cdn.msar.me/fonts/solaiman-lipi/font.css" rel="stylesheet">
+    ```
+*   **CSS Usage:**
+    ```css
+    .font-solaiman {
+      font-family: 'SolaimanLipi', Arial, sans-serif !important;
+    }
+    ```
 
-## 4. Testing Instructions
+## 3. Technical Stack & Commands
 
-- Every new feature or bug fix must be accompanied by relevant unit or integration tests.
-- Ensure all tests pass (`pnpm test`) before opening a pull request.
-- For targeted testing, you can specify a test file: `pnpm vitest run <path_to_test_file>`.
-- Manually verify your changes on different screen sizes to ensure responsiveness.
+*   **Package Manager:** This project will use `pnpm` for package management.
+*   **Install dependencies:** `pnpm install`
+*   **Run development server:** `pnpm dev`
+*   **Build for production:** `pnpm build`
+*   **Run tests:** `pnpm test`
+*   **Run linter:** `pnpm lint`
 
-## 5. Security Considerations
+## 4. Security Considerations
 
-- **Data Sensitivity:** This platform handles sensitive personal information. Sanitize all user inputs to prevent XSS attacks and use parameterized queries to prevent SQL injection.
-- **Authentication:** All administrative routes must be protected with robust authentication and authorization checks.
-- **Dependencies:** Do not introduce new dependencies without approval. Regularly run `pnpm audit` to check for and fix known vulnerabilities.
-- **Environment Variables:** All secret keys, API endpoints, and database credentials must be stored in `.env` files and never committed to the repository.
+*   **Data Sensitivity:** This platform handles sensitive personal information (students, staff). Sanitize all user inputs to prevent XSS and use parameterized queries or an ORM to prevent SQL injection.
+*   **Authentication:** All routes handling private data must be protected with robust authentication and role-based authorization checks.
+*   **Environment Variables:** All secret keys, API endpoints, and database credentials must be stored in `.env` files and never committed to the repository.
 
-## 6. PR and Commit Guidelines
+## 5. PR and Commit Guidelines
 
-- **Branching:** Create new branches from `main` with the format `[type]/[short-description]` (e.g., `feat/hsc-result-page` or `fix/notice-display-bug`).
-- **Commit Messages:** Use the [Conventional Commits](https://www.conventionalcommits.org/) specification.
-  - `feat:` A new feature.
-  - `fix:` A bug fix.
-  - `docs:` Documentation only changes.
-  - `style:` Changes that do not affect the meaning of the code (white-space, formatting).
-  - `refactor:` A code change that neither fixes a bug nor adds a feature.
-- **Pull Requests:**
-  - The title should follow the Conventional Commits format.
-  - The description must clearly explain the "what" and "why" of the changes.
-  - Ensure all CI checks (linting, testing, building) are passing before requesting a review.
+*   **Branching:** Create new branches from `main` with the format `[type]/[short-description]` (e.g., `feat/student-profile-page` or `fix/attendance-bug`).
+*   **Commit Messages:** Use the [Conventional Commits](https://www.conventionalcommits.org/) specification.
+*   **Pull Requests:** The description must clearly explain the "what" and "why" of the changes. Ensure all CI checks (linting, testing, building) are passing before requesting a review.
