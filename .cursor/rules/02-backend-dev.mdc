@@ -1,0 +1,33 @@
+---
+description: Enforces security and API design standards for all backend code.
+globs: ["**/*.py", "**/*.php", "**/*.rb", "**/*.go", "**/routes/**/*.js", "**/api/**/*.js"]
+alwaysApply: false
+---
+
+# Backend Development Rules
+
+When creating or modifying any backend files (API endpoints, database logic, etc.), you must adhere to the following security and design guidelines.
+
+## 1. Security is Paramount
+
+*   **Prevent SQL Injection:** Always use a trusted ORM (Object-Relational Mapper) or parameterized queries for all database interactions. **Never use string formatting to construct SQL queries.**
+*   **Prevent Cross-Site Scripting (XSS):** Sanitize all user-provided data on the server-side before it is stored or rendered back to the client.
+*   **Authentication & Authorization:** All API endpoints that handle sensitive data or perform privileged actions must be protected by robust authentication and role-based authorization checks.
+
+## 2. API Design
+
+*   **RESTful Principles:** Follow RESTful principles for API design. Use standard HTTP methods (`GET`, `POST`, `PUT`, `DELETE`) correctly.
+*   **Versioning:** All API endpoints should be versioned (e.g., `/api/v1/...`).
+*   **Consistent Naming:** Use a consistent naming convention for endpoints (e.g., kebab-case).
+*   **Clear Responses:** API responses should use appropriate HTTP status codes and return JSON objects with clear and consistent structures. For errors, include a meaningful error message.
+    ```json
+    {
+      "status": "error",
+      "message": "Invalid student ID."
+    }
+    ```
+
+## 3. Environment Variables
+
+*   All secret keys, database credentials, and other sensitive configuration values **must** be loaded from environment variables (e.g., from a `.env` file).
+*   **Do not hardcode secrets in the source code.**

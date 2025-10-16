@@ -1,0 +1,24 @@
+---
+description: Provides essential, high-level context about the project.
+alwaysApply: true
+---
+
+# Project Overview: Chalishiya High School Management System
+
+## 1. Core Goal
+
+The primary goal of this repository is to build a comprehensive, web-based School Management System for **Chalishiya High School**. The system will digitize and streamline the school's administrative and academic operations.
+
+**Key Document:** For a full breakdown of features, modules, and technical requirements, **always consult the [Project Specification](../PROJECT_SPECIFICATION.md).**
+
+## 2. Current Status
+
+**IMPORTANT:** This project is currently in the **documentation phase**. No application code has been written yet. The build and test commands defined in `AGENTS.md` are placeholders and will fail if executed. Do not attempt to run them until the project is formally initialized.
+
+## 3. Key Architectural Decisions
+
+*   **Platform:** Responsive web-based application.
+*   **Architecture:** Monolithic (e.g., Django, Laravel).
+*   **Database:** Relational (e.g., PostgreSQL, MySQL).
+*   **Languages:** A backend language (e.g., Python, PHP) and frontend languages (HTML, CSS, JavaScript).
+*   **Multi-language Support:** The UI must support both **Bengali** and **English**.

@@ -1,0 +1,45 @@
+---
+description: Enforces UI/UX and design standards for all frontend code.
+globs: ["**/*.html", "**/*.css", "**/*.js", "**/*.jsx", "**/*.tsx", "**/*.vue", "**/*.svelte"]
+alwaysApply: false
+---
+
+# Frontend Design and Development Rules
+
+When creating or modifying any frontend files, you must adhere to the following UI/UX and design guidelines.
+
+## 1. Color Palette
+
+Use the following color variables for all UI elements. Do not use hardcoded hex codes.
+
+| Role          | Color Name      | Hex Code    |
+| :------------ | :-------------- | :---------- |
+| **Primary**   | School Blue     | `#005A9C`   |
+| **Secondary** | Success Green   | `#28A745`   |
+| **Accent**    | Notice Yellow   | `#FFC107`   |
+| **Text**      | Dark Charcoal   | `#333333`   |
+| **Background**| Light Gray      | `#F8F9FA`   |
+| **Border**    | Subtle Gray     | `#DEE2E6`   |
+
+## 2. Typography (Mandatory Bengali Fonts)
+
+The application must support both Bengali and English. For Bengali text, you must use the specified fonts from the CDN.
+
+*   **Primary Font:** `Kalpurush` must be the default font for the `body`.
+    ```css
+    body {
+      font-family: 'Kalpurush', Arial, sans-serif !important;
+    }
+    ```
+*   **Embedding in HTML:** Ensure the font's CSS file is linked in the `<head>` of the main HTML document.
+    ```html
+    <link href="https://cdn.msar.me/fonts/kalpurush/font.css" rel="stylesheet">
+    ```
+
+*   **Other Fonts:** `Mukti`, `SiyamRupali`, and `SolaimanLipi` can be used for specific elements by applying dedicated classes (e.g., `.font-mukti`). Refer to `AGENTS.md` for their CDN links.
+
+## 3. Accessibility
+
+*   Use semantic HTML5 tags (`<nav>`, `<main>`, `<section>`, etc.).
+*   Ensure all images have descriptive `alt` attributes.
+*   Ensure all form inputs have associated `<label>` tags.

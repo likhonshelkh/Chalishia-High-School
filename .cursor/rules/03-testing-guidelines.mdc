@@ -1,0 +1,57 @@
+---
+description: Provides guidelines for writing unit and integration tests.
+alwaysApply: false
+---
+
+# Testing Guidelines
+
+Use this rule with `@testing-guidelines` when you are tasked with writing tests.
+
+## 1. Testing Philosophy
+
+*   **Unit Tests:** Each new function or component should have a corresponding unit test. Unit tests should be small, fast, and test one thing in isolation.
+*   **Integration Tests:** Critical workflows (e.g., student enrollment, fee payment) should be covered by integration tests to ensure different parts of the system work together correctly.
+
+## 2. Test Structure
+
+Follow the **Arrange-Act-Assert** (AAA) pattern for structuring your tests:
+
+*   **Arrange:** Set up the test data and preconditions.
+*   **Act:** Execute the function or code you are testing.
+*   **Assert:** Verify that the outcome is as expected.
+
+### Example (JavaScript/Jest)
+
+```javascript
+describe('calculateGPA', () => {
+  it('should return 5.00 for all A+ grades', () => {
+    // Arrange
+    const marks = [85, 90, 95];
+    const expectedGPA = 5.00;
+
+    // Act
+    const actualGPA = calculateGPA(marks);
+
+    // Assert
+    expect(actualGPA).toBe(expectedGPA);
+  });
+
+  it('should return 0.00 for all failing grades', () => {
+    // Arrange
+    const marks = [20, 30, 15];
+    const expectedGPA = 0.00;
+
+    // Act
+    const actualGPA = calculateGPA(marks);
+
+    // Assert
+    expect(actualGPA).toBe(expectedGPA);
+  });
+});
+```
+
+## 3. What to Test
+
+*   Test the "happy path" (expected inputs and outputs).
+*   Test edge cases (e.g., empty inputs, null values, zero).
+*   Test error conditions (e.g., invalid input should throw an error).
