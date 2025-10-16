@@ -1,6 +1,6 @@
 # Copilot.md - Guidelines for GitHub Copilot
 
-This document provides specific guidelines for developers using **GitHub Copilot** within the **Chalishiya High School Management System** project. Copilot should be used as a productivity tool to assist in writing boilerplate code, generating functions, and suggesting implementations, while adhering to the project's standards.
+This document provides specific guidelines for developers using **GitHub Copilot** within the **Chalishia High School Management System** project. Copilot should be used as a productivity tool to assist in writing boilerplate code, generating functions, and suggesting implementations, while adhering to the project's standards.
 
 ## 1. Copilot's Primary Role
 

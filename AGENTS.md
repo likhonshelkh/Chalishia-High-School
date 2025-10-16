@@ -1,12 +1,30 @@
 # AGENTS.md - AI and Developer Guidelines
 
-This document provides essential guidelines for AI agents and human developers contributing to the **Chalishiya High School Management System** project. Following these instructions ensures consistency, quality, and efficiency.
+This document provides essential guidelines for AI agents and human developers contributing to the **Chalishia High School Management System** project. Following these instructions ensures consistency, quality, and efficiency.
 
 ## 1. Project Overview
 
-This repository contains the code for a comprehensive school management system for **Chalishiya High School**. The goal is to create a modern, accessible, and reliable platform for students, teachers, parents, and administrators. The system must be lightweight and practical for a rural school environment.
+This repository contains the code for a comprehensive school management system for **Chalishia High School**. The goal is to create a modern, accessible, and reliable platform for students, teachers, parents, and administrators. The system must be lightweight and practical for a rural school environment.
 
-## 2. UI/UX and Design Guidelines
+## 2. File Headers
+
+All source files (`.js`, `.ts`, `.tsx`, `.css`, etc.) **MUST** include the following header at the top of the file. The description should be a brief, one-line summary of the file's purpose.
+
+```
+/**
+ * ┌────────────────────────────────────────────────────┐
+ * │ Author      : Likhon Sheikh (@likhonsheikh)       │
+ * │ Description : [Add file/module description here]  │
+ * │ Version     : 1.0.0                               │
+ * │ Date        : 2025-10-16                          │
+ * │ License     : MIT                                 │
+ * │ Website     : https://likhonsheikh.com            │
+ * │ GitHub      : https://github.com/likhonsheikh/Chalishia-High-School │
+ * └────────────────────────────────────────────────────┘
+ */
+```
+
+## 3. UI/UX and Design Guidelines
 
 A clean, user-friendly, and professional user experience is critical. All contributions must adhere strictly to the established design system.
 
@@ -73,7 +91,7 @@ To ensure consistent and readable Bengali text, this project mandates the use of
     }
     ```
 
-## 3. Technical Stack & Commands
+## 4. Technical Stack & Commands
 
 *   **Package Manager:** This project will use `pnpm` for package management.
 *   **Install dependencies:** `pnpm install`
@@ -82,19 +100,24 @@ To ensure consistent and readable Bengali text, this project mandates the use of
 *   **Run tests:** `pnpm test`
 *   **Run linter:** `pnpm lint`
 
-## 4. Security Considerations
+## 5. Testing and Error Handling
+
+*   **Continuous Integration:** All pushes and pull requests to the `main` branch will trigger a GitHub Actions workflow that runs `pnpm build` and `pnpm test`. All checks **MUST** pass.
+*   **Error Logging:** When implementing new features, any errors or exceptions that occur (e.g., failed API calls, build errors) **MUST** be logged to a file named `error.log` in the root directory. This file should be added to `.gitignore`.
+
+## 6. Security Considerations
 
 *   **Data Sensitivity:** This platform handles sensitive personal information (students, staff). Sanitize all user inputs to prevent XSS and use parameterized queries or an ORM to prevent SQL injection.
 *   **Authentication:** All routes handling private data must be protected with robust authentication and role-based authorization checks.
 *   **Environment Variables:** All secret keys, API endpoints, and database credentials must be stored in `.env` files and never committed to the repository.
 
-## 5. PR and Commit Guidelines
+## 7. PR and Commit Guidelines
 
 *   **Branching:** Create new branches from `main` with the format `[type]/[short-description]` (e.g., `feat/student-profile-page` or `fix/attendance-bug`).
 *   **Commit Messages:** Use the [Conventional Commits](https://www.conventionalcommits.org/) specification.
 *   **Pull Requests:** The description must clearly explain the "what" and "why" of the changes. Ensure all CI checks (linting, testing, building) are passing before requesting a review.
 
-## 6. UI/UX Development Rules
+## 8. UI/UX Development Rules
 
 ### Accessibility
 - **MUST** ensure all UI is keyboard-operable.

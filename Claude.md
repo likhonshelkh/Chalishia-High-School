@@ -1,6 +1,6 @@
 # Claude.md - Guidelines for Anthropic's Claude
 
-This document provides specific guidelines for using the **Claude AI model** in the **Chalishiya High School Management System** project. Claude's primary use is for code review, ensuring code quality, maintaining security, and improving readability.
+This document provides specific guidelines for using the **Claude AI model** in the **Chalishia High School Management System** project. Claude's primary use is for code review, ensuring code quality, maintaining security, and improving readability.
 
 ## 1. Claude's Primary Role
 

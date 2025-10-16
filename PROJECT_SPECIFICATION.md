@@ -1,8 +1,8 @@
-# Chalishiya High School Management System - Project Specification
+# Chalishia High School Management System - Project Specification
 
 ## Introduction
 
-This document outlines the project specification for a comprehensive, web-based School Management System for **Chalishiya High School**. The system aims to digitize and streamline the school's administrative and academic operations, making them more efficient and accessible for staff, students, and parents.
+This document outlines the project specification for a comprehensive, web-based School Management System for **Chalishia High School**. The system aims to digitize and streamline the school's administrative and academic operations, making them more efficient and accessible for staff, students, and parents.
 
 Given the school's rural location, the system will be designed to be lightweight, user-friendly, and functional even with potential internet connectivity constraints.
 
@@ -10,11 +10,11 @@ Given the school's rural location, the system will be designed to be lightweight
 
 | Detail                | Information                                       |
 | --------------------- | ------------------------------------------------- |
-| **Name**              | Chalishiya High School                            |
+| **Name**              | Chalishia High School                            |
 | **EIIN Number**       | 115498                                            |
 | **Type**              | Private Secondary School                          |
-| **Location**          | Chalishiya, Abhaynagor, Jessore                   |
-| **Union**             | Chalishiya Union No. 3                            |
+| **Location**          | Chalishia, Abhaynagor, Jessore                   |
+| **Union**             | Chalishia Union No. 3                            |
 | **Post Office**       | Noapara                                           |
 | **Contact**           | 01714960797                                       |
 | **Website**           | chalishiahighschool.jessoreboard.gov.bd           |

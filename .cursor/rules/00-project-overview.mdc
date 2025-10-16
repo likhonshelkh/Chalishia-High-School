@@ -3,11 +3,11 @@ description: Provides essential, high-level context about the project.
 alwaysApply: true
 ---
 
-# Project Overview: Chalishiya High School Management System
+# Project Overview: Chalishia High School Management System
 
 ## 1. Core Goal
 
-The primary goal of this repository is to build a comprehensive, web-based School Management System for **Chalishiya High School**. The system will digitize and streamline the school's administrative and academic operations.
+The primary goal of this repository is to build a comprehensive, web-based School Management System for **Chalishia High School**. The system will digitize and streamline the school's administrative and academic operations.
 
 **Key Document:** For a full breakdown of features, modules, and technical requirements, **always consult the [Project Specification](../PROJECT_SPECIFICATION.md).**
 
