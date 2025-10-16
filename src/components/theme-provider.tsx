@@ -1,7 +1,7 @@
 /**
  * ┌────────────────────────────────────────────────────┐
  * │ Author      : Likhon Sheikh (@likhonsheikh)       │
- * │ Description : Next.js configuration file.         │
+ * │ Description : Theme provider for dark mode toggle.│
  * │ Version     : 1.0.0                               │
  * │ Date        : 2025-10-16                          │
  * │ License     : MIT                                 │
@@ -10,21 +10,12 @@
  * └────────────────────────────────────────────────────┘
  */
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "jessoreboard.gov.bd",
-      },
-      {
-        protocol: "http",
-        hostname: "jessoreboard.gov.bd",
-      },
-    ],
-  },
-};
+"use client";
 
-export default nextConfig;
+import * as React from "react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { type ThemeProviderProps } from "next-themes/dist/types";
+
+export function ThemeProvider({ children, ...props }: ThemeProviderProps): JSX.Element {
+  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
+}

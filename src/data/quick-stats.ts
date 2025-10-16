@@ -1,7 +1,7 @@
 /**
  * ┌────────────────────────────────────────────────────┐
  * │ Author      : Likhon Sheikh (@likhonsheikh)       │
- * │ Description : Next.js configuration file.         │
+ * │ Description : Quick stats dataset for landing page│
  * │ Version     : 1.0.0                               │
  * │ Date        : 2025-10-16                          │
  * │ License     : MIT                                 │
@@ -10,21 +10,11 @@
  * └────────────────────────────────────────────────────┘
  */
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "jessoreboard.gov.bd",
-      },
-      {
-        protocol: "http",
-        hostname: "jessoreboard.gov.bd",
-      },
-    ],
-  },
-};
+import type { QuickStat } from "@/types/content";
 
-export default nextConfig;
+export const QUICK_STATS: readonly QuickStat[] = [
+  { number: "৩৫০+", label: "নিবন্ধিত শিক্ষার্থী" },
+  { number: "১৭", label: "অভিজ্ঞ শিক্ষক" },
+  { number: "১০+", label: "সহায়ক কর্মী" },
+  { number: "১০০ ডেসিমেল", label: "বিদ্যালয় ক্যাম্পাস" },
+] as const;

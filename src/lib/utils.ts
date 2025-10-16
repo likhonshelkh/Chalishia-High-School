@@ -1,7 +1,7 @@
 /**
  * ┌────────────────────────────────────────────────────┐
  * │ Author      : Likhon Sheikh (@likhonsheikh)       │
- * │ Description : News ticker component.              │
+ * │ Description : Utility helpers for class handling. │
  * │ Version     : 1.0.0                               │
  * │ Date        : 2025-10-16                          │
  * │ License     : MIT                                 │
@@ -10,17 +10,9 @@
  * └────────────────────────────────────────────────────┘
  */
 
-import React from 'react';
-import '../styles/NewsTicker.css';
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
-const NewsTicker: React.FC = () => {
-  return (
-    <div className="news-ticker-container">
-      <div className="news-ticker">
-        <p>This is a scrolling news ticker. Replace this with actual news content.</p>
-      </div>
-    </div>
-  );
-};
-
-export default NewsTicker;
+export function cn(...inputs: ClassValue[]): string {
+  return twMerge(clsx(inputs));
+}

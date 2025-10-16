@@ -1,7 +1,7 @@
 /**
  * ┌────────────────────────────────────────────────────┐
  * │ Author      : Likhon Sheikh (@likhonsheikh)       │
- * │ Description : Styles for the NewsTicker component.│
+ * │ Description : Shared content type definitions.    │
  * │ Version     : 1.0.0                               │
  * │ Date        : 2025-10-16                          │
  * │ License     : MIT                                 │
@@ -10,31 +10,34 @@
  * └────────────────────────────────────────────────────┘
  */
 
-.news-ticker-container {
-  width: 100%;
-  overflow: hidden;
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
-  padding: 10px;
+export interface QuickStat {
+  readonly number: string;
+  readonly label: string;
 }
 
-.news-ticker {
-  display: inline-block;
-  white-space: nowrap;
-  animation: ticker 20s linear infinite;
+export interface OverviewHighlight {
+  readonly title: string;
+  readonly description: string;
 }
 
-.news-ticker p {
-  display: inline-block;
-  margin: 0;
-  padding-right: 100%;
+export type FacilityIconKey = "infrastructure" | "playground" | "activities";
+
+export interface CampusFacility {
+  readonly icon: FacilityIconKey;
+  readonly title: string;
+  readonly details: string;
 }
 
-@keyframes ticker {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+export interface ServiceLink {
+  readonly href: string;
+  readonly icon: string;
+  readonly title: string;
+  readonly description: string;
+}
+
+export interface HomeMenuLink {
+  readonly href: string;
+  readonly icon: string;
+  readonly title: string;
+  readonly description: string;
 }
