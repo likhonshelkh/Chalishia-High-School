@@ -1,3 +1,15 @@
+/**
+ * ┌────────────────────────────────────────────────────┐
+ * │ Author      : Likhon Sheikh (@likhonsheikh)       │
+ * │ Description : Tailwind CSS configuration.         │
+ * │ Version     : 1.0.0                               │
+ * │ Date        : 2025-10-16                          │
+ * │ License     : MIT                                 │
+ * │ Website     : https://likhonsheikh.com            │
+ * │ GitHub      : https://github.com/likhonsheikh/Chalishia-High-School │
+ * └────────────────────────────────────────────────────┘
+ */
+
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -9,15 +21,31 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'school-blue': '#005A9C',
-        'success-green': '#28A745',
-        'notice-yellow': '#FFC107',
-        'dark-charcoal': '#333333',
-        'light-gray': '#F8F9FA',
-        'subtle-gray': '#DEE2E6',
+        "school-blue": "#005A9C",
+        "success-green": "#28A745",
+        "notice-yellow": "#FFC107",
+        "dark-charcoal": "#333333",
+        "light-gray": "#F8F9FA",
+        "subtle-gray": "#DEE2E6",
       },
       fontFamily: {
-        kalpurush: ['Kalpurush', 'Arial', 'sans-serif'],
+        sans: [
+          "var(--font-inter)",
+          "Kalpurush",
+          "Noto Sans Bengali",
+          "Mukti",
+          "SiyamRupali",
+          "SolaimanLipi",
+          "Arial",
+          "sans-serif",
+        ],
+      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1rem",
+          md: "1.5rem",
+        },
       },
     },
   },

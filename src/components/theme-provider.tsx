@@ -1,7 +1,7 @@
 /**
  * ┌────────────────────────────────────────────────────┐
  * │ Author      : Likhon Sheikh (@likhonsheikh)       │
- * │ Description : News ticker component.              │
+ * │ Description : Theme provider for dark mode toggle.│
  * │ Version     : 1.0.0                               │
  * │ Date        : 2025-10-16                          │
  * │ License     : MIT                                 │
@@ -10,17 +10,12 @@
  * └────────────────────────────────────────────────────┘
  */
 
-import React from 'react';
-import '../styles/NewsTicker.css';
+"use client";
 
-const NewsTicker: React.FC = () => {
-  return (
-    <div className="news-ticker-container">
-      <div className="news-ticker">
-        <p>This is a scrolling news ticker. Replace this with actual news content.</p>
-      </div>
-    </div>
-  );
-};
+import * as React from "react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { type ThemeProviderProps } from "next-themes/dist/types";
 
-export default NewsTicker;
+export function ThemeProvider({ children, ...props }: ThemeProviderProps): JSX.Element {
+  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
+}
