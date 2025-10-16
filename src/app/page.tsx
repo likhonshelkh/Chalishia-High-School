@@ -10,14 +10,14 @@
  * └────────────────────────────────────────────────────┘
  */
 
-import Footer from "@/components/footer";
-import Header from "@/components/header";
-import CampusFacilities from "@/components/campus-facilities";
-import MainContent from "@/components/main-content";
-import Navigation from "@/components/navigation";
-import NewsTicker from "@/components/news-ticker";
-import QuickStats from "@/components/quick-stats";
-import SchoolOverview from "@/components/school-overview";
+import Footer from "@/components/layout/footer";
+import Header from "@/components/layout/header";
+import Navigation from "@/components/layout/navigation";
+import NewsTicker from "@/components/layout/news-ticker";
+import CampusFacilities from "@/components/sections/campus-facilities";
+import MainContent from "@/components/sections/main-content";
+import QuickStats from "@/components/sections/quick-stats";
+import SchoolOverview from "@/components/sections/school-overview";
 
 export default function Home(): JSX.Element {
   return (
