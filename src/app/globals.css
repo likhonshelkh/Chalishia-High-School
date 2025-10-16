@@ -1,0 +1,44 @@
+/**
+ * ┌────────────────────────────────────────────────────┐
+ * │ Author      : Likhon Sheikh (@likhonsheikh)       │
+ * │ Description : Global styles for the Next.js app.  │
+ * │ Version     : 1.0.0                               │
+ * │ Date        : 2025-10-16                          │
+ * │ License     : MIT                                 │
+ * │ Website     : https://likhonsheikh.com            │
+ * │ GitHub      : https://github.com/likhonsheikh/Chalishia-High-School │
+ * └────────────────────────────────────────────────────┘
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-light-gray text-dark-charcoal;
+  font-family: var(--font-noto-sans-bengali), 'Kalpurush', 'Noto Sans Bengali', Arial, sans-serif !important;
+}
+
+a {
+  @apply text-school-blue transition-colors duration-150;
+}
+
+a:hover {
+  @apply text-success-green;
+}
+
+.text-school-blue {
+  color: #005A9C;
+}
+
+.bg-school-blue {
+  background-color: #005A9C;
+}
+
+.border-subtle-gray {
+  border-color: #DEE2E6;
+}
+
+.text-dark-charcoal {
+  color: #333333;
+}
