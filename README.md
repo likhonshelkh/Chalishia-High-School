@@ -1,10 +1,10 @@
-# Chalishiya High School Management System
+# Chalishia High School Management System
 
-Welcome to the official repository for the **Chalishiya High School Management System**. This project aims to develop a modern, robust, and user-friendly digital platform to manage the school's administrative and academic operations.
+Welcome to the official repository for the **Chalishia High School Management System**. This project aims to develop a modern, robust, and user-friendly digital platform to manage the school's administrative and academic operations.
 
 ## Project Goal
 
-The primary goal is to create a comprehensive school management application tailored to the needs of Chalishiya High School, a private secondary school in Jessore, Bangladesh. The system will streamline processes like student management, attendance, grading, and communication, making them more efficient for administrators, teachers, students, and parents.
+The primary goal is to create a comprehensive school management application tailored to the needs of Chalishia High School, a private secondary school in Jessore, Bangladesh. The system will streamline processes like student management, attendance, grading, and communication, making them more efficient for administrators, teachers, students, and parents.
 
 ## Key Documents
 

@@ -1,6 +1,6 @@
 # Gemini.md - Guidelines for Google Gemini
 
-This document provides specific guidelines for using the **Google Gemini** AI model in the **Chalishiya High School Management System** project. Gemini's primary use is for architectural planning, problem-solving, documentation, and generating complex code logic.
+This document provides specific guidelines for using the **Google Gemini** AI model in the **Chalishia High School Management System** project. Gemini's primary use is for architectural planning, problem-solving, documentation, and generating complex code logic.
 
 ## 1. Gemini's Primary Role
 

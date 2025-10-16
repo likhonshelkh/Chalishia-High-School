@@ -1,10 +1,21 @@
+/**
+ * ┌────────────────────────────────────────────────────┐
+ * │ Author      : Likhon Sheikh (@likhonsheikh)       │
+ * │ Description : Root layout for the application.    │
+ * │ Version     : 1.0.0                               │
+ * │ Date        : 2025-10-16                          │
+ * │ License     : MIT                                 │
+ * │ Website     : https://likhonsheikh.com            │
+ * │ GitHub      : https://github.com/likhonsheikh/Chalishia-High-School │
+ * └────────────────────────────────────────────────────┘
+ */
+
 import type { Metadata } from "next";
 import "./../styles/globals.css";
-import "./../styles/site.css";
 
 export const metadata: Metadata = {
-  title: "Chalishiya High School",
-  description: "Management System for Chalishiya High School",
+  title: "Chalishia High School",
+  description: "Management System for Chalishia High School",
 };
 
 export default function RootLayout({

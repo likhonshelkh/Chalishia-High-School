@@ -1,10 +1,10 @@
-# Copilot Instructions for Chalishiya High School Management System
+# Copilot Instructions for Chalishia High School Management System
 
 This document provides essential instructions for any AI coding agent to work effectively on this repository. **Please trust these instructions and only perform a search if the information is incomplete or found to be in error.**
 
 ## High-Level Details
 
-*   **Repository Summary:** This repository contains the project files for the **Chalishiya High School Management System**. The goal is to build a comprehensive, web-based application to manage the school's administrative and academic operations, including student information, attendance, grades, and fees.
+*   **Repository Summary:** This repository contains the project files for the **Chalishia High School Management System**. The goal is to build a comprehensive, web-based application to manage the school's administrative and academic operations, including student information, attendance, grades, and fees.
 *   **Project Type:** This is a web application project, currently in the initial planning and documentation phase. The backend will likely be built with a framework like Django or Laravel, and the frontend will be standard HTML/CSS/JavaScript.
 *   **Languages:** The primary languages will be a backend language (e.g., Python, PHP) and frontend languages (HTML, CSS, JavaScript). All documentation is in Markdown.
 *   **Repository Size:** The repository is currently small and consists only of documentation files.
