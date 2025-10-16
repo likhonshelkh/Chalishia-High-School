@@ -1,7 +1,7 @@
 /**
  * ┌────────────────────────────────────────────────────┐
  * │ Author      : Likhon Sheikh (@likhonsheikh)       │
- * │ Description : Styles for the NewsTicker component.│
+ * │ Description : Utility helpers for class handling. │
  * │ Version     : 1.0.0                               │
  * │ Date        : 2025-10-16                          │
  * │ License     : MIT                                 │
@@ -10,31 +10,9 @@
  * └────────────────────────────────────────────────────┘
  */
 
-.news-ticker-container {
-  width: 100%;
-  overflow: hidden;
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
-  padding: 10px;
-}
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
-.news-ticker {
-  display: inline-block;
-  white-space: nowrap;
-  animation: ticker 20s linear infinite;
-}
-
-.news-ticker p {
-  display: inline-block;
-  margin: 0;
-  padding-right: 100%;
-}
-
-@keyframes ticker {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+export function cn(...inputs: ClassValue[]): string {
+  return twMerge(clsx(inputs));
 }
