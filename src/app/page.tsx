@@ -12,10 +12,12 @@
 
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import CampusFacilities from "@/components/campus-facilities";
 import MainContent from "@/components/main-content";
 import Navigation from "@/components/navigation";
 import NewsTicker from "@/components/news-ticker";
 import QuickStats from "@/components/quick-stats";
+import SchoolOverview from "@/components/school-overview";
 
 export default function Home(): JSX.Element {
   return (
@@ -25,6 +27,8 @@ export default function Home(): JSX.Element {
       <NewsTicker />
       <MainContent />
       <QuickStats />
+      <SchoolOverview />
+      <CampusFacilities />
       <Footer />
     </div>
   );

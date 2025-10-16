@@ -16,21 +16,21 @@ interface StatItem {
 }
 
 const stats: StatItem[] = [
-  { number: "1500+", label: "শিক্ষার্থী" },
-  { number: "45+", label: "শিক্ষক" },
-  { number: "25+", label: "কর্মচারী" },
-  { number: "95%", label: "পাসের হার" },
+  { number: "৩৫০+", label: "নিবন্ধিত শিক্ষার্থী" },
+  { number: "১৭", label: "অভিজ্ঞ শিক্ষক" },
+  { number: "১০+", label: "সহায়ক কর্মী" },
+  { number: "১০০ ডেসিমেল", label: "বিদ্যালয় ক্যাম্পাস" },
 ];
 
 export default function QuickStats(): JSX.Element {
   return (
-    <section className="bg-gradient-to-r from-primary to-blue-800 py-12 text-white">
+    <section className="bg-[#005A9C] py-12 text-white">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="text-3xl font-bold md:text-4xl">{stat.number}</p>
-              <p className="text-lg opacity-90">{stat.label}</p>
+              <p className="text-3xl font-extrabold md:text-4xl">{stat.number}</p>
+              <p className="text-sm font-medium text-white/90 md:text-base">{stat.label}</p>
             </div>
           ))}
         </div>
