@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Kalpurush', Arial, sans-serif !important;
+  color: #333333; /* Dark Charcoal */
+  background-color: #F8F9FA; /* Light Gray */
+}
+
+.text-school-blue {
+  color: #005A9C;
+}
+
+.bg-school-blue {
+  background-color: #005A9C;
+}
+
+.border-subtle-gray {
+  border-color: #DEE2E6;
+}
+
+.text-dark-charcoal {
+    color: #333333;
+}
