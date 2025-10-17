@@ -1,7 +1,7 @@
 /**
  * ┌────────────────────────────────────────────────────┐
  * │ Author      : Likhon Sheikh (@likhonsheikh)       │
- * │ Description : Global styles for the Next.js app.  │
+ * │ Description : Global CSS styles.                  │
  * │ Version     : 1.0.0                               │
  * │ Date        : 2025-10-16                          │
  * │ License     : MIT                                 │
@@ -10,85 +10,98 @@
  * └────────────────────────────────────────────────────┘
  */
 
+@import url("https://fonts.maateen.me/solaiman-lipi/font.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: #F8F9FA;
-    --foreground: #333333;
-    --card: #FFFFFF;
-    --card-foreground: #333333;
-    --popover: #FFFFFF;
-    --popover-foreground: #333333;
-    --primary: #005A9C;
-    --primary-foreground: #FFFFFF;
-    --secondary: #28A745;
-    --secondary-foreground: #FFFFFF;
-    --muted: #E2E8F0;
-    --muted-foreground: #4A5568;
-    --accent: #FFC107;
-    --accent-foreground: #333333;
-    --destructive: #DC2626;
-    --destructive-foreground: #FFFFFF;
-    --border: #DEE2E6;
-    --input: #DEE2E6;
-    --ring: #005A9C;
-    --radius: 0.75rem;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+
+    --chart-1: 12 76% 61%;
+
+    --chart-2: 173 58% 39%;
+
+    --chart-3: 197 37% 24%;
+
+    --chart-4: 43 74% 66%;
+
+    --chart-5: 27 87% 67%;
   }
 
   .dark {
-    --background: #0F172A;
-    --foreground: #F8FAFC;
-    --card: #111827;
-    --card-foreground: #F8FAFC;
-    --popover: #111827;
-    --popover-foreground: #F8FAFC;
-    --primary: #60A5FA;
-    --primary-foreground: #0F172A;
-    --secondary: #34D399;
-    --secondary-foreground: #0B1120;
-    --muted: #1F2937;
-    --muted-foreground: #CBD5F5;
-    --accent: #FBBF24;
-    --accent-foreground: #0B1120;
-    --destructive: #F87171;
-    --destructive-foreground: #0B1120;
-    --border: #1F2937;
-    --input: #1F2937;
-    --ring: #60A5FA;
-  }
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
 
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
   * {
     @apply border-border;
   }
-
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: var(--font-inter), 'Kalpurush', 'Noto Sans Bengali', 'Mukti', 'SiyamRupali', 'SolaimanLipi', Arial, sans-serif !important;
-  }
-
-  a {
-    @apply text-primary transition-colors duration-150;
-  }
-
-  a:hover {
-    @apply text-secondary;
-  }
-}
-
-@layer utilities {
-  .animate-marquee {
-    animation: marquee 20s linear infinite;
-  }
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
+    @apply bg-background text-foreground;
+    font-family: "SolaimanLipi", "Inter", sans-serif;
   }
 }
